@@ -1,0 +1,146 @@
+.advantages {
+    background-color: $bg-2;
+    padding-top: 20px;
+    padding-bottom: 97px;
+
+    @media screen and (min-width: 768px) {
+    padding-top: 33px;
+    padding-bottom: 132px;
+    }
+
+    @media screen and (min-width: 1280px) {
+    padding-top: 20px;
+    padding-bottom: 139px;
+    }
+}
+.advantages__container {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: auto;
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        padding-left: 36px;
+        padding-right: 36px;
+
+    }
+    @media screen and (min-width: 1280px) {
+        width: 1280px;
+        padding-left: 115px;
+        padding-right: 115px;
+    }
+}
+.advantages__list {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+.advantages__list-item {
+    min-width: 180px;
+    height: auto;
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 38px;
+        }
+    }
+    @media screen and (min-width: 480px) {
+        max-width: 390px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0px;
+        &:not(:last-child){
+            margin-right: 60px;
+        }
+    }
+    @media screen and (min-width: 1280px){
+        min-width: 330px;
+        &:not(:last-child){
+            margin-right: 30px;
+        }
+    }
+}
+.hidden-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);  
+    overflow: hidden;
+}
+.advantages__pretext {
+    font-family: $font-h;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 1.138;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $focus;
+    &::before {
+        content: '';
+        display: block;
+        margin-bottom: 17px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 36px;
+        }
+        @media screen and (min-width: 1280px) {
+            margin-bottom: 40px;
+        }
+    }
+    @media screen and (min-width: 320px) {
+        font-size: 43px;
+    }
+    @media screen and (min-width: 768px) {
+        font-size: 48px;
+        line-height: 1.145;
+    }
+    @media screen and (min-width: 1280px) {
+        font-size: 58px;
+        line-height: 1.138;
+    }
+    &.advantages-logo-1::before  {
+        width: 33px;
+        height: 50px;
+        background-image: url(../images/advantages/icon1.svg);
+    }
+    &.advantages-logo-2::before  {
+        width: 50px;
+        height: 50px;
+        background-image: url(../images/advantages/icon2.svg);
+    }
+    &.advantages-logo-3::before  {
+        width: 44px;
+        height: 50px;
+        background-image: url(../images/advantages/icon3.svg);
+    }
+}
+.advantages__text {
+    margin-top: 18px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    color: $text-2;
+    @media screen and (min-width: 320px) {
+        font-size: 14px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 13px;
+        line-height: 24px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-top: 15px;
+        line-height: 28px;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+    }
+}

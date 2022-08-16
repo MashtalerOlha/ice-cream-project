@@ -1,0 +1,35 @@
+.gallery {
+  @media (min-width:320px) {
+  background-image: linear-gradient(to bottom, $bg-2 26%, $text-1 26%);
+  }
+  @media (min-width:768px) {
+  background-image: linear-gradient(to bottom, $bg-2 32%, $text-1 32%);
+  }
+  @media (min-width:1280px) {
+  background-image: linear-gradient(to bottom, $bg-2 34.7%, $text-1 34.7%);
+  }
+}
+.gallery__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+  @media (max-width: 767px) {
+    max-width: 320px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+.picture {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,138 @@
+/*Модальное окно*/
+.backdrop-request {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: $animation-dur $animation-type;
+  overflow-y: scroll;
+  background-color: rgb(255, 228, 225, 0.5);
+}
+.backdrop-request.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop-request.is-hidden .window {
+  transform: translateX(-50%) translateY(-200%);
+}
+.window {
+  box-sizing: border-box;
+  @extend %window-centered;
+  @include transition(transform);
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  background-color: $bg-mob-menu;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  &__close {
+    display: flex;
+    margin-inline-start: auto;
+    padding: 8.5px;
+    box-sizing: border-box;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-mob-menu;
+    border: none;
+    color: $text-1;
+    @include transition(color);
+  }
+  &__icon {
+    fill: $focus;
+  }
+  @media (min-width:480px) {
+    max-width: 420px;
+  }
+}
+
+.modal__title {
+  width: 100%;
+  font-family: $font-h;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-1;
+  padding-top: 12px;
+  padding-right: 32px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+.modal__form {
+  padding-top: 30px;
+  padding-right: 32px;
+}
+.modal__form-field {
+  display: flex;
+  flex-direction: column;
+}
+.modal__form-field + .modal__form-field {
+  margin-top: 8px;
+}
+.modal__label {
+  font-family: $font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.31;
+  color: $text-1;
+}
+
+.modal__input {
+  font-family: $font;
+  color: $focus;
+  border: 1px solid $text-1;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 25px;
+  padding: 5px 10px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  background-color: $bg-img-hero;
+  @include transition (border);
+}
+.modal__input:hover,
+.modal__input:focus {
+  border: 1px solid $focus;
+}
+.modal__button--div {
+  display: flex;
+  justify-content: center;
+}
+.modal__button--submit {
+  font-family: $font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.31;
+  display: flex;
+  align-items: center;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  border: none;
+  color: $focus;
+  background-color: $text-1;
+  @include transition (background-color);
+  margin-top: 30px;
+  cursor: pointer;
+}
+.modal__button--submit:hover,
+.modal__button--submit:focus {
+  background-color: $hover-2;
+}

@@ -1,0 +1,334 @@
+.list {
+    list-style: none;
+  }
+  
+  .link {
+    text-decoration: none;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+  
+.contacts {
+    padding-top: 43px;
+    padding-bottom: 50px;
+    @media screen and (max-width: 767px) {
+      background-image: linear-gradient(to bottom, $text-1 9%, $bg-2 9%);
+    }
+  
+    @media screen and (min-width: 768px) {
+      padding-top: 59px;
+      padding-bottom: 80px;
+      background-color: $bg-2;
+    }
+  
+    @media screen and (min-width: 1280px) {
+      padding-top: 66px;
+      background-image: url(../images/contacts/background-img.png), linear-gradient(to bottom, $text-1 22%, $bg-2 22%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+}
+  
+  .contacts__container {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: $font, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    @media screen and (min-width: 768px) {
+      max-width: 768px;
+      font-size: 14px;
+      padding-left: 36px;
+      padding-right: 36px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 1280px;
+      font-size: 16px;
+      padding-left: 115px;
+      padding-right: 115px;
+    }
+  }
+  
+  .contacts__secondary-container {
+    margin-bottom: 54px;
+  
+    @media screen and (min-width: 768px) {
+      margin-bottom: 81px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 86px;
+    }
+  }
+  
+  .contacts__list {
+    display: block;  
+  
+    @media screen and  (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-left: -31px;
+      margin-top: -31px;
+    }
+  }
+  
+  .contacts__item {
+    padding: 43px 20px;
+  
+    background-color: $text-1;
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      padding: 50px 31px;
+      flex-basis: calc(100% / 3 - 20px);
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+    @media screen and (min-width: 1280px) {
+      flex-basis: calc(100% / 3 - 31px);
+      margin-left: 31px;
+      margin-top: 31px;
+    }
+  }
+  
+  .contacts__span {
+    display: inline-block;
+    padding: 0 24px;
+    margin-bottom: 25px;
+  
+    text-transform: uppercase;
+    color: $text-1;
+    border-radius: 6px;
+  
+    &_cream {
+      background-color: $bg-item-2;
+    }
+    &_green {
+      background-color: $bg-item-3;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 15px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
+    }
+  }
+  
+  .contacts__city {
+    margin-bottom: 10px;
+  
+    color: $text-2;
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
+      margin-bottom: 14px;
+    }
+  }
+  
+  .contacts__text {
+    margin-bottom: 25px;
+  
+    line-height: 1.5;
+    color: $text-3;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+      line-height: 1.66;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
+      line-height: 1.83;
+    }
+  }
+  
+  .schedule {
+    margin-bottom: 25px;
+  
+    &::after,
+    &::before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $border;
+    }
+    &::after {
+      margin-top: 25px;
+    }
+    &::before {
+      margin-bottom: 25px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+      &::after {
+        margin-top: 30px;
+      }
+      &::before {
+        margin-bottom: 30px;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 32px;
+      &::after {
+        margin-top: 32px;
+      }
+      &::before {
+        margin-bottom: 32px;
+      }
+    }
+  }
+  
+  .schedule__item {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .schedule__days {
+    color: $text-2;
+  }
+  
+  .schedule__time {
+    color: $bg-img-hero;
+  }
+  
+  .contacts__link {
+    display: block;
+    line-height: 1.5;
+    color: $text-3;
+    @media screen and (min-width: 768px) {
+      line-height: 1.83;
+    }
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: $link;
+    }
+  }
+  
+  // ****************Maps*****************
+  
+  .maps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+  
+  .maps__item {
+    @media screen and (max-width: 767px) {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+  
+  .maps__button {
+    display: flex;
+    align-items: center;
+    height: 44px;
+  
+    font-family: $font, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.31;
+    border: none;
+    border-radius: 22px;
+    &:first-child {
+      padding: 12px 18px;
+    }
+    &:last-child {
+      padding: 12px 32px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      &:first-child {
+        padding-right: 35px;
+        padding-left: 30px;
+      }
+      &:last-child {
+        padding-right: 39px;
+        padding-left: 38px;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      &:first-child {
+        padding-right: 36px;
+        padding-left: 35px;
+      }
+      &:last-child {
+        padding-right: 40px;
+        padding-left: 39px;
+      }
+    }
+  }
+  
+  .maps__button_dark {
+    color: $text-1;
+    background-color: $icon-1;
+    @include transition(background-color);
+  
+    &:hover,
+    &:focus {
+      background-color: $hover-1;
+    }
+  }
+  
+  .maps__button_light {
+    color: $focus;
+    background-color: $text-1;
+  
+    @include transition(background-color);
+  
+    &:hover,
+    &:focus {
+      background-color: $hover-2;
+    }
+  }
+  
+  .maps__icon {
+    width: 11px;
+    height: 19px;
+    margin-left: 14px;
+  }
+  
+  .maps__icon_light {
+    fill: $text-1;
+  }
+  
+  .maps__icon_dark {
+    fill: $focus;
+  }
+  

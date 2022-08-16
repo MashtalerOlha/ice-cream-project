@@ -1,0 +1,86 @@
+<section id="hero-header" class="hero-header">
+    <div class="hero-header__container"> 
+        <div class="hero-header__box">
+            <div class="hero-header__logo"></div>
+            <ul class="hero-header__list">
+                <li class="hero-header__list--item">
+                    <a class="hero-header__link" href="#hero-header">Home</a>
+                </li>
+                <li class="hero-header__list--item">
+                    <a class="hero-header__link" href="#gallery-section">About us</a>
+                </li>
+                <li class="hero-header__list--item">
+                    <a class="hero-header__link" href="#about-section">How it’s made?</a>
+                </li>
+                <li class="hero-header__list--item">
+                    <a class="hero-header__link" href="#products-section">Our products</a>
+                </li>
+                <li class="hero-header__list--item">
+                    <a class="hero-header__link" href="#contacts-section">Contact</a>
+                </li>
+            </ul>
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-toggle__icon" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                    <use href="./images/symbol-defs.svg#icon-mob-menu"></use>
+                </svg>
+            </button>
+            <button class="hero-header__buy" data-toggle-backdrop-request type="button">
+                <p class="hero-header__buy--text">Buy now</p>
+                <svg class="hero-header__buy--icon" width="10" height="14">
+                    <use href="./images/symbol-defs.svg#icon-vector-red" />
+                </svg>
+            </button>
+        </div>
+        <div>
+            <div class="hero-header__title">
+                <h1 class="hero-header__first">ice cream made with<br><span class="hero-header__second">passion</span></h1>
+            </div>
+            <button class="hero-header__button red" type="button">
+                <a class="hero-header__button--link red-link" href="#products-section">Products</a>
+            </button>
+            <button class="hero-header__button white" type="button">
+                <a class="hero-header__button--link white-link" href="#about-section">How it’s made?</a>
+            </button>
+        </div>
+        <div class="hero-header__box-1">
+            <picture class="hero-header__ice-cream">
+                <source srcset="./images/hero/hero1-1x.png 1x, ./images/hero/hero1-2x.png 2x" media="(min-width: 1280px)" />
+                <source srcset="./images/hero/hero1-tab1x.png 1x, ./images/hero/hero1-tab2x.png 2x" media="(min-width: 768px)" />
+                <source srcset="./images/hero/hero1-mob1x.png 1x, ./images/hero/hero1-mob2x.png 2x" media="(min-width: 320px)" />
+                <img src="./images/hero/hero1-mob1x.png" alt="ice-cream">
+            </picture>
+        </div>
+        <div class="hero-header__box-2">
+            <picture class="hero-header__milk">
+                <source srcset="./images/hero/hero3-1x.png 1x, ./images/hero/hero3-2x.png 2x" media="(min-width: 1280px)">
+                <source srcset="./images/hero/hero3-tab1x.png 1x, ./images/hero/hero3-tab2x.png 2x" media="(min-width: 768px)">
+                <img src="./images/hero/hero3-tab1x.png" alt="milk">
+            </picture>
+            <div class="hero-header__text-box">
+                <p class="hero-header__text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                <button class="hero-header__button-arrow" type="button">
+                    <a href="#" class="hero-header__text-a" data-title="Lorem, ipsum, dolor sit amet, consectetur, adipiscing elit.">
+                        <svg class="hero-header__button-arrow--icon" width="7" height="7">
+                            <use href="./images/symbol-defs.svg#icon-arrow-right2" />
+                        </svg>
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="hero-header__box-3">
+            <picture class="hero-header__tasty">
+                <source srcset="./images/hero/hero2-1x.png 1x, ./images/hero/hero2-2x.png 2x" media="(min-width: 1280px)">
+                <source srcset="./images/hero/hero2-tab1x.png 1x, ./images/hero/hero2-tab2x.png 2x" media="(min-width: 768px)">
+                <img class="" src="./images/hero/hero2-tab1x.png" alt="sooootasty">
+            </picture>
+        </div>
+        <div class="hero-header__box-4">
+            <span class="hero-header__span">16</span>
+            <p class="hero-header__p">cafes</p>
+            <span class="hero-header__span">23</span>
+            <p class="hero-header__p">food trucks</p>
+            <div class="hero-header__circle--1"></div>
+            <div class="hero-header__circle--2"></div>
+        </div>
+    </div>
+</section>

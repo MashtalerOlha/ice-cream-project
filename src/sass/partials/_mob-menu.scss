@@ -1,0 +1,71 @@
+.menu-container {
+  position: fixed;
+  z-index: 3;
+  padding-top: 23px;
+  padding-left: 21px;
+  padding-right: 20px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg-mob-menu;
+  transform: translateX(200%);
+  transition: transform $animation-dur ease-in-out;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+  overflow-y: scroll;
+}
+.menu-container .menu-toggle {
+  background-color: $bg-mob-menu;
+}
+.js-close-menu {
+  display: block;
+  margin-inline-start: auto;
+  margin-right: 8px;
+  margin-bottom: 23px;
+}
+.mob-menu__button {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 48px;
+  padding-left: 48px;
+  border-radius: 20px;
+  border: none;
+  background-color: $text-1;
+  &--text {
+    font-family: $font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.31;
+    color: $focus;
+  }
+  &--icon {
+    margin-left: 16px;
+  }
+}
+.mob-menu__list {
+  margin-top: 32px;
+  &--item:not(:last-child) {
+    margin-bottom: 22px;
+  }
+}
+.mob-menu__link {
+  font-family: $font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.28;
+  color: $text-1;
+  @include transition(color);
+  &:hover {
+    color: $focus;
+  }
+  &:focus {
+    color: $focus;
+  }
+}

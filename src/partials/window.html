@@ -1,0 +1,30 @@
+<div data-backdrop-request class="backdrop-request is-hidden">
+    <div class="window">
+        <button class="window__close" data-toggle-backdrop-request>
+            <svg class="window__icon" width="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+        </button>
+        <!--Продолжай ниже писать контент-->
+        <h2 class="modal__title">Enter your details and we will book a discount for you</h2>
+        <form class="modal__form" name="modal_form" autocomplete="on" novalidate>
+            <ul>
+                <li class="modal__form-field">
+                    <label class="modal__label" for="name-modal">Name</label>
+                    <input class="modal__input" type="text" name="name-modal" id="name-modal" />
+                </li>
+                <li class="modal__form-field">
+                    <label class="modal__label" for="tel-modal">Phone number</label>
+                    <input class="modal__input" type="tel" name="tel-modal" id="tel-modal" />
+                </li>
+                <li class="modal__form-field">
+                    <label class="modal__label" for="email-modal">Email</label>
+                    <input class="modal__input email-modal" type="email" name="email-modal" id="email-modal" />
+                </li>
+            </ul>
+            <div class="modal__button--div">
+                <button class="modal__button--submit" data-toggle-backdrop-request type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для секций
+@import './base/defaults.scss';
+@import './base/normalize.scss';
+
+@import './utils/mixins.scss';
+@import './utils/placeholders.scss';
+@import './utils/variables.scss';
+
+@import './partials/hero-header.scss';
+@import './partials/mob-menu.scss';
+@import './partials/products.scss';
+@import './partials/about.scss';
+@import './partials/advantages.scss';
+@import './partials/gallery.scss';
+@import './partials/customer-reviews.scss';
+@import './partials/contacts.scss';
+@import './partials/footer.scss';
+@import './partials/window.scss';
