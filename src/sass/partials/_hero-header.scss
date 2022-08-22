@@ -1,6 +1,7 @@
 .hero-header {
     width: 100%;
     background-color: $bg-hero;
+    overflow: hidden;
 }
 .hero-header__container {
     position: relative;

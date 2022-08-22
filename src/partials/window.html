@@ -1,30 +1,66 @@
-<div data-backdrop-request class="backdrop-request is-hidden">
+<div class="backdrop is-hidden" data-modal-buy>
     <div class="window">
-        <button class="window__close" data-toggle-backdrop-request>
+        <button class="window__close" data-modal-close-buy>
             <svg class="window__icon" width="20" height="20">
                 <use href="./images/symbol-defs.svg#icon-close"></use>
             </svg>
         </button>
-        <!--Продолжай ниже писать контент-->
-        <h2 class="modal__title">Enter your details and we will book a discount for you</h2>
-        <form class="modal__form" name="modal_form" autocomplete="on" novalidate>
-            <ul>
-                <li class="modal__form-field">
-                    <label class="modal__label" for="name-modal">Name</label>
-                    <input class="modal__input" type="text" name="name-modal" id="name-modal" />
-                </li>
-                <li class="modal__form-field">
-                    <label class="modal__label" for="tel-modal">Phone number</label>
-                    <input class="modal__input" type="tel" name="tel-modal" id="tel-modal" />
-                </li>
-                <li class="modal__form-field">
-                    <label class="modal__label" for="email-modal">Email</label>
-                    <input class="modal__input email-modal" type="email" name="email-modal" id="email-modal" />
-                </li>
-            </ul>
-            <div class="modal__button--div">
-                <button class="modal__button--submit" data-toggle-backdrop-request type="submit">Send</button>
-            </div>
-        </form>
+
+        <div class="header-form__container">
+            <h2 class="modal__title">Check out the purchase</h2>
+            <form class="modal__form" name="modal_form" autocomplete="off">
+                <div class="modal-product__container">
+                    <label class="product-label" for="ice-cream">Ice cream</label>
+                    <input class="product-chekbox" type="checkbox" id="ice-cream" name="ice-cream">
+                    <label class="product-quantity__label" for="ice-cream-quantity">Quantity</label>
+                    <input type="number" name="ice-cream-quantity" id="ice-cream-quantity"
+                        class="product-quantity__input">
+
+                    <label class="product-label" for="ice-coffee">Ice coffee</label>
+                    <input class="product-chekbox" type="checkbox" id="ice-coffee" name="ice-coffee">
+                    <label class="product-quantity__label" for="milkshakes-quantity">Quantity</label>
+                    <input type="number" name="ice-coffee-quantity" id="ice-coffee-quantity"
+                        class="product-quantity__input">
+
+                    <label class="product-label" for="milkshakes">Milkshakes</label>
+                    <input class="product-chekbox" type="checkbox" id="milkshakes" name="milkshakes">
+                    <label class="product-quantity__label" for="milkshakes-quantity">Quantity</label>
+                    <input type="number" name="milkshakes-quantity" id="milkshakes-quantity"
+                        class="product-quantity__input">
+
+
+                </div>
+
+                <div class="modal-purchase__form-field">
+                    <label for="mail" class="modal-purchase__form-lable">Buyer name</label>
+                    <input type="text" name="mail" id="mail" class="modal-purchase__form-input">
+                </div>
+
+                <div class="modal-purchase__form-field">
+                    <label for="mail" class="modal-purchase__form-lable">Phone number</label>
+                    <input type="tel" name="mail" id="mail" class="modal-purchase__form-input">
+                </div>
+
+                <div class="modal-purchase__form-field">
+                    <label for="mail" class="modal-purchase__form-lable">Delivery address</label>
+                    <input type="text" name="mail" id="mail" class="modal-purchase__form-input">
+                </div>
+
+                <div class="modal-purchase__form-comment">
+                    <label for="comment" class="modal-purchase__form-lable">Comments</label>
+                    <textarea class="modal-purchase__form-textarea" name="comment" id="comment"
+                        placeholder="Enter text"></textarea>
+                </div>
+
+                <div class="modal-purchase__radio">
+                    <input class="modal-purchase__radio-input" type="radio" id="cash" name="payment">
+                    <label class="modal-purchase__radio-lable" for="cash">Cash</label>
+
+                    <input class="modal-purchase__radio-input" type="radio" id="creditCard" name="payment">
+                    <label class="modal-purchase__radio-lable" for="creditCard">Credit card</label>
+                </div>
+                <button type="submit" class="modal-purchase__button">Buy</button>
+            </form>
+        </div>
     </div>
 </div>

@@ -72,7 +72,7 @@
 
         <ul class="maps list">
             <li class="maps__item">
-                <button class="maps__button maps__button_dark">
+                <button class="maps__button maps__button_dark" data-map-modal-open>
                     Our Locations
                     <svg class="maps__icon maps__icon_light">
                         <use href="./images/symbol-defs.svg#icon-vector-white"></use>
@@ -80,7 +80,7 @@
                 </button>
             </li>
             <li class="maps__item">
-                <button class="maps__button maps__button_light">
+                <button class="maps__button maps__button_light" data-modal-franchise-open>
                     Franchise
                     <svg class="maps__icon maps__icon_dark">
                         <use href="./images/symbol-defs.svg#icon-vector-red"></use>
@@ -89,4 +89,69 @@
             </li>
         </ul>
     </div>
+
+    <div class="is-hidden backdrop" data-map-modal>
+        <div class="map-modal">
+            <button class="map-modal__button-close" data-map-modal-close>
+                <svg width="18" height="18">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <h3 class="map-modal__title">You can find us here!</h3>
+            <div class="map-sity__container">Choose your city!</div>
+            <iframe class="chicago hidden"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d371.7923128090754!2d-87.58486761359542!3d41.79946779999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2973ee17aab5%3A0x63e5efcc045e9747!2zMTY0NyBFIDUzcmQgU3QsIENoaWNhZ28sIElMIDYwNjE1LCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1660979945447!5m2!1suk!2sua"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <iframe class="new-york hidden"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.1298350525531!2d-73.96333297077491!3d40.794580098707705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f62106a1b7f5%3A0x416b904e2873b3b3!2zNDA4IEMgUCBXZXN0LCBOZXcgWW9yaywgTlkgMTAwMjUsINCh0L_QvtC70YPRh9C10L3RliDQqNGC0LDRgtC4INCQ0LzQtdGA0LjQutC4!5e0!3m2!1suk!2sua!4v1660984060001!5m2!1suk!2sua"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="los-an hidden"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.6417649179689!2d-118.17708240356886!3d33.768050553811705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd31172e186539%3A0xa5768632c98801c9!2zMTIwMCBFIEJyb2Fkd2F5LCBMb25nIEJlYWNoLCBDQSA5MDgwMiwg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1660982863857!5m2!1suk!2sua"
+                width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <ul class="map-modal__sity-list">
+                <li class="map-modal__sity-item">
+                    <button type="button" class="map-modal__sity-button  chicago-btn">Chicago</button>
+                </li>
+                <li class="map-modal__sity-item">
+                    <button type="button" class="map-modal__sity-button los-an-btn">Los Angeles</button>
+                </li>
+                <li class="map-modal__sity-item">
+                    <button type="button" class="map-modal__sity-button new-york-btn">New York</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="backdrop is-hidden" data-modal-franchise>
+        <div class="modal__franchise">
+            <button class="modal__button-close" data-modal-franchise-close>
+                <svg width="18" height="18">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+          <div class="modal__container">
+              <p class="franchise-form__title">
+                If you are interested in the issue of cooperation, fill out the form
+                and we will contact you
+              </p>
+            <form class="franchise-form" autocomplete="off">
+                <label class="franchise-form__label" for="name">Name</label>
+                <input class="franchise-form__input" type="text" name="name" id="name" />
+
+                <label class="franchise-form__label" for="tel">Tel</label>
+                <input class="franchise-form__input" type="tel" name="tel" id="tel" />
+
+                <label class="franchise-form__label" for="mail">Email</label>
+                <input class="franchise-form__input" type="email" name="mail" id="mail" />
+
+                <button class="franchise-modal__button" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
 </section>

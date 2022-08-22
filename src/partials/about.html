@@ -1,30 +1,82 @@
 <section id="about-section" class="section about-section">
-    <div class="about-container">
-        <span class="about-span"> tradition and love </span>
-        <h2 class="about-title">how it’s made?</h2>
-        <div class="about-photo">
-            <div>
-                <picture class="about-picture">
-                    <source media="(min-width:1280px)" srcset="./images/about/about-1x.png 1x, ./images/about/about-2x.png 2x">
-                
-                    <source media="(min-width:768px)" srcset="./images/about/about-tab1x.png 1x, ./images/about/about-tab2x.png 2x">
-                
-                    <source media="(min-width:320px)" srcset="./images/about/about-mob1x.png 1x, ./images/about/about-mob2x.png 2x">
-                    <img src="./images/about/about-mob1x.png" alt="photo">
-                </picture>
-            </div>
-            <div class="about-text">
-                <p class="about-text__pre-info">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-                    cursus, faucibus lorem eget, egestas eros.
-                    Maecenas eleifend erat at justo fringilla. </p>
-                <p class="about-text__info"> Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-                    Mauris rhoncus orci in imperdiet placerat.
-                    Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-                    tincidunt.
-                    <span class="info-t"> Aliquam erat volutpat. Aenean accumsan.</span>
-                </p>
-                <button class="about-btn" type="button">Read more</button>
-            </div>
-        </div>
+  <div class="about-container">
+    <span class="about-span"> tradition and love </span>
+    <h2 class="about-title">how it’s made?</h2>
+    <div class="about-photo">
+      <div>
+        <picture class="about-picture">
+          <source media="(min-width:1280px)" srcset="./images/about/about-1x.png 1x, ./images/about/about-2x.png 2x">
+
+          <source media="(min-width:768px)"
+            srcset="./images/about/about-tab1x.png 1x, ./images/about/about-tab2x.png 2x">
+
+          <source media="(min-width:320px)"
+            srcset="./images/about/about-mob1x.png 1x, ./images/about/about-mob2x.png 2x">
+          <img src="./images/about/about-mob1x.png" alt="photo">
+        </picture>
+      </div>
+      <div class="about-text">
+        <p class="about-text__pre-info">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros.
+          Maecenas eleifend erat at justo fringilla. </p>
+        <p class="about-text__info"> Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat.
+          Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.
+          <span class="info-t"> Aliquam erat volutpat. Aenean accumsan.</span>
+        </p>
+        <button class="about-btn" type="button" data-about-modal-open>Read more</button>
+      </div>
     </div>
+  </div>
 </section>
+
+<div class="backdrop is-hidden" data-about-modal>
+  <div class="about-modal">
+    <button class="about-modal__button-close" data-about-modal-close>
+      <svg width="16" height="16">
+        <use href="./images/symbol-defs.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="about-modal__wrap">
+      <article class="about__article">
+        <h2 class="about-modal__header">THE DAILY BENEFITS OF ONE GLASS OF MILK</h2>
+        <img class="about__img" src="./images/about/cow.png" alt="milk and cow">
+        <span class="text-span"> Complexion:</span> If you want your complexion to lighten, instead of buying cosmetics,
+        drinking 2 glasses of milk will
+        fetch more benefits. Milk helps the skin to supple, glow and soft. Owing to its countless nutrients and vitamin
+        contents, milk can be your best friend, if you are seeking a fair complexion.
+        Strong Teeth: Being a tremendous source of Calcium, consumption of milk ensures strong teeth and help a person
+        refrain from the decay of tooth and cavities. Care should be taken that Vitamin D is also consumed along with
+        milk. The former helps the body to absorb calcium.
+        <br />
+        <br />
+        <span class="text-span">Healthy Bones:</span> Bone health and milk has a direct co-relation. It is, therefore,
+        advised that kids consume milk
+        to ensure proper growth. In the case of an adult, milk makes the bone strong and mitigate the risk of
+        osteoporosis. A daily serving of one glass should do the trick for any individual.
+        <br />
+        <br />
+        <span class="text-span">Weight Loss:</span> Studies in the past have shown that women who consume milk daily can
+        shed weight quicker compared
+        to those who do not drink milk. A glass of milk can be drunk as a fulfilling appetizer, evening snack etc. It
+        makes sense that milk is drunk during the night just before sleep.
+        <br/>
+        <p class="about-benefit-text">GLASS OF MILK PER DAY IS:</p>
+        <ul class="about-benefits-list">
+          <li class="about-benefits-item"> 35% Riboflavin
+          </li>
+          <li class="about-benefits-item"> 25% Calcium
+          </li>
+          <li class="about-benefits-item"> 20% Phosphorus
+          </li>
+          <li class="about-benefits-item">20% Vitamin B5</li>
+          <li class="about-benefits-item">15% Vitamin D</li>
+          <li class="about-benefits-item"> 8% Potassium</li>
+          <li class="about-benefits-item">10% Niacin</li>
+          <li class="about-benefits-item">15% Vitamin A</li>
+        </ul>
+        <p class="about-benefit-text">DRINK MILK AND BE HEALTHY!</p> 
+    </article>
+</div>

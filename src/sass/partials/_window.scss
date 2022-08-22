@@ -1,138 +1,236 @@
-/*Модальное окно*/
-.backdrop-request {
-  z-index: 3;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: $animation-dur $animation-type;
-  overflow-y: scroll;
-  background-color: rgb(255, 228, 225, 0.5);
-}
-.backdrop-request.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop-request.is-hidden .window {
-  transform: translateX(-50%) translateY(-200%);
-}
 .window {
-  box-sizing: border-box;
-  @extend %window-centered;
-  @include transition(transform);
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  padding-top: 8px;
-  padding-right: 8px;
-  padding-left: 40px;
-  padding-bottom: 40px;
-  background-color: $bg-mob-menu;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  &__close {
-    display: flex;
-    margin-inline-start: auto;
-    padding: 8.5px;
-    box-sizing: border-box;
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background-color: $bg-mob-menu;
-    border: none;
-    color: $text-1;
-    @include transition(color);
+  position: relative;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  border-radius: 8px;
+  padding: 20px 32px;
+
+  background: $bg-mob-menu;
+
+  @media screen and (max-width: 480px) {
+    width: 100vw-5vw;
   }
-  &__icon {
-    fill: $focus;
+
+  @media screen and (min-width: 480px) {
+    min-width: 0;
+    width: 450px;
   }
-  @media (min-width:480px) {
-    max-width: 420px;
+
+  @media screen and (min-width: 768px) {
+    min-width: 0;
+    width: 528px;
   }
+}
+
+.window__close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  top: 5px;
+  right: 0px;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: Titan One;
+  font-style: normal;
+  text-align: center;
+  color: $link;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $link;
+    background-color: $focus;
+  }
+}
+
+.header-form__container {
+  background-color: $bg-item-1;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 16px;
 }
 
 .modal__title {
-  width: 100%;
-  font-family: $font-h;
+  font-family: Titan One;
   font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  text-align: center;
   text-transform: uppercase;
-  color: $text-1;
-  padding-top: 12px;
-  padding-right: 32px;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-}
-.modal__form {
-  padding-top: 30px;
-  padding-right: 32px;
-}
-.modal__form-field {
-  display: flex;
-  flex-direction: column;
-}
-.modal__form-field + .modal__form-field {
-  margin-top: 8px;
-}
-.modal__label {
-  font-family: $font;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.31;
-  color: $text-1;
+  color: $hover-1;
+  margin-bottom: 15px;
+  font-size: 33px;
 }
 
-.modal__input {
-  font-family: $font;
-  color: $focus;
-  border: 1px solid $text-1;
-  box-sizing: border-box;
-  border-radius: 4px;
-  height: 25px;
-  padding: 5px 10px;
-  outline: none;
-  position: relative;
-  cursor: pointer;
-  letter-spacing: 0.01em;
-  background-color: $bg-img-hero;
-  @include transition (border);
-}
-.modal__input:hover,
-.modal__input:focus {
-  border: 1px solid $focus;
-}
-.modal__button--div {
+.modal-product__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: baseline;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-bottom: 20px;
+  }
 }
-.modal__button--submit {
+
+.product-label {
   font-family: $font;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.31;
+  text-align: center;
+  color: #d41443;
+  font-size: 30px;
+  margin-right: 8px;
+}
+
+.product-chekbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 25px;
+}
+
+.product-quantity__label {
+  color: #d41443;
+  font-size: 28px;
+  font-family: $font;
+  margin-right: 10px;
+}
+
+.product-quantity__input {
+  border-radius: 7px;
+  border: 1px solid $link;
+  width: 83px;
+  height: 26px;
+  outline: none;
+  padding: 0 10px;
+  font-family: $font;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $focus;
+  }
+}
+
+.modal-purchase__form-field {
+  position: relative;
+
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.modal-purchase__form-lable {
+  font-family: $font;
+  margin-bottom: 4px;
+  font-size: 21px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $focus;
+}
+
+.modal-purchase__form-input {
+  margin: 0;
+  padding: 0 15px 0 42px;
+  height: 40px;
+  border: 1px solid $bg-mob-menu;
+  border-radius: 8px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  outline: none;
+  &:hover,
+  &:focus {
+    border: 1px solid $focus;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 30px;
+  }
+}
+
+.modal-purchase__form-comment {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.modal-purchase__form-textarea {
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid $bg-mob-menu;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: $font;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $focus;
+
+    &::placeholder {
+      color: $link;
+      font-family: $font;
+      font-size: 15px;
+    }
+  }
+
+  @media screen and (max-width: 449px) {
+    height: 90px;
+  }
+}
+
+.modal-purchase__radio {
   display: flex;
   align-items: center;
-  padding-left: 37px;
-  padding-right: 37px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 20px;
-  border: none;
-  color: $focus;
-  background-color: $text-1;
-  @include transition (background-color);
-  margin-top: 30px;
-  cursor: pointer;
+  justify-content: center;
 }
-.modal__button--submit:hover,
-.modal__button--submit:focus {
-  background-color: $hover-2;
+
+.modal-purchase__radio-lable {
+  font-family: $font;
+  font-size: 21px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $focus;
+  margin-right: 16px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.modal-purchase__button {
+  height: 37px;
+  width: 150px;
+  display: grid;
+  margin: auto;
+  margin-top: 15px;
+  font-family: $font, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.31;
+  border: none;
+  border-radius: 22px;
+  padding: 12px 18px;
+
+  @media screen and (min-width: 768px) {
+    padding-right: 35px;
+    padding-left: 30px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  color: $text-1;
+  background-color: $hover-1;
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $hover-2;
+    color: $hover-1;
+  }
 }
