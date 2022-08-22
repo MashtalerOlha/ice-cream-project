@@ -1,6 +1,6 @@
 .window {
   position: relative;
-  height: calc(100vh - 50px);
+  height: 800px;
   overflow-y: scroll;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -86,6 +86,10 @@
   color: #d41443;
   font-size: 30px;
   margin-right: 8px;
+}
+
+.product-label-milk{
+margin-right: 1px;
 }
 
 .product-chekbox {
