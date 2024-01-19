@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://aibotnr-4752-65aa68284632651100000058.ubos.tech/ai-bot-chat@main/dist/build/static/js/bundle.min.js"></script>
   </head>
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
@@ -46,5 +47,13 @@
         slidesToShow: 1,
         slidesToScroll: 1
       });</script>
+        <langflow-chat
+      id="langflow-chat-element"
+      chat_input_field="input"
+      host_url="https://aibotnr-4752-65aa68284632651100000058.ubos.tech"
+      flow_id="customChat"
+      style="position: absolute; bottom: 18px; right: 18px"
+    ></langflow-chat>
+    <script>document.getElementById("langflow-chat-element").setAttribute("chat_inputs", JSON.stringify({ input: "", userIdx: Date.now() }));</script>
   </body>
 </html>
