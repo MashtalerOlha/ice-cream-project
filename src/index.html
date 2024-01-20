@@ -54,5 +54,17 @@
         slidesToScroll: 1
       });</script>
     <script>document.getElementById("langflow-chat-element").setAttribute("chat_inputs", JSON.stringify({ input: "", userIdx: Date.now() }));</script>
+        <script>
+        $(document).ready(function () {
+            // Attach a click event listener to the document
+            $(document).on('click', function (event) {
+                // Check if the clicked element is inside the iframe
+                if ($(event.target).closest('#myIframe').length) {
+                    // The click is inside the iframe, prevent default scroll behavior
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
   </body>
 </html>
