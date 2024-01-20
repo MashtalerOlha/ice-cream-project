@@ -16,17 +16,18 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    <script src="https://aibotnr-4752-65aa68284632651100000058.ubos.tech/ai-bot-chat@main/dist/build/static/js/bundle.min.js"></script>
+    <script src="https://aibotnr-4752-65aa68284632651100000058.ubos.tech/ai-bot-chaqt@main/dist/build/static/js/bundle.min.js"></script>
   </head>
   <body>
-<script>
-console.log("sdasd");
-var iframeDoc = document.getElementById('iframe');
-iframeDoc.parentNode.removeChild(iframeDoc);
-</script>
-Live AI ChatBot Demo for Website:
-<iframe id="iframe" src="https://aibotui-8988-658ad621387fb711000001e1.ubos.tech/CustomChat" width="100%" height="950px" frameborder="0" scrolling="no"></iframe>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+ <langflow-chat
+      window_title="Hello, welcome to Ice Cream!"
+      id="langflow-chat-element"
+      chat_input_field="input"
+      host_url="https://aibotnr-4752-65aa68284632651100000058.ubos.tech"
+      flow_id="customChat"
+      style="position: absolute; bottom: 18px; right: 18px"
+      chat_position="top-left"
+    ></langflow-chat>
     <include src="./partials/hero-header.html"></include>
     <include src="./partials/mob-menu.html"></include>
     <include src="./partials/products.html"></include>
