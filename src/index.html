@@ -57,17 +57,16 @@
         slidesToScroll: 1
       });</script>
     <script>document.getElementById("langflow-chat-element").setAttribute("chat_inputs", JSON.stringify({ input: "", userIdx: Date.now() }));</script>
-        <script>
-        $(document).ready(function () {
-            // Attach a click event listener to the document
-            $(document).on('click', function (event) {
-                // Check if the clicked element is inside the iframe
-                if ($(event.target).closest('#myIframe').length) {
-                    // The click is inside the iframe, prevent default scroll behavior
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
+        document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('click', function (event) {
+        var target = event.target;
+
+        // Check if the clicked element or its parent is inside the iframe
+        if (target.closest('#myIframe')) {
+            // The click is inside the iframe, prevent default scroll behavior
+            event.preventDefault();
+        }
+    });
+});
   </body>
 </html>
