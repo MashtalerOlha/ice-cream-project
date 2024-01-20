@@ -19,7 +19,6 @@
     <script src="https://aibotnr-5850-658ad621387fb711000001e1.ubos.tech/ai-bot-chaqt@main/dist/build/static/js/bundle.min.js"></script>
   </head>
   <body>
-<!--     <iframe  id="myIframe">
     <langflow-chat
       id="langflow-chat-element"
       chat_input_field="input"
@@ -27,9 +26,8 @@
       flow_id="customChat"
       style="position: absolute; bottom: 18px; right: 18px"
     ></langflow-chat>
-      </iframe> -->
-    <iframe id="myIframe" src="https://aibotui-8988-658ad621387fb711000001e1.ubos.tech/CustomChat" width="100%" height="950px" frameborder="0" scrolling="no"></iframe>
-    <include src="./partials/hero-header.html"></include>
+<!--     <iframe id="myIframe" src="https://aibotui-8988-658ad621387fb711000001e1.ubos.tech/CustomChat" width="100%" height="950px" frameborder="0" scrolling="no"></iframe>
+    <include src="./partials/hero-header.html"></include> -->
     <include src="./partials/mob-menu.html"></include>
     <include src="./partials/products.html"></include>
     <include src="./partials/about.html"></include>
@@ -57,16 +55,5 @@
         slidesToScroll: 1
       });</script>
     <script>document.getElementById("langflow-chat-element").setAttribute("chat_inputs", JSON.stringify({ input: "", userIdx: Date.now() }));</script>
-        document.addEventListener('DOMContentLoaded', function () {
-    document.addEventListener('click', function (event) {
-        var target = event.target;
-
-        // Check if the clicked element or its parent is inside the iframe
-        if (target.closest('#myIframe')) {
-            // The click is inside the iframe, prevent default scroll behavior
-            event.preventDefault();
-        }
-    });
-});
   </body>
 </html>
