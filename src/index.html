@@ -16,27 +16,17 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
- 
-    <script>
-      (function(d,t) {
-        var BASE_URL="https://chatwoot-9068-66bb85c5f94f71110000005b.ubos.tech";
-        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=BASE_URL+"/packs/js/sdk.js";
-        g.defer = true;
-        g.async = true;
-        s.parentNode.insertBefore(g,s);
-        g.onload=function(){
-          window.chatwootSDK.run({
-            websiteToken: 'USDb2G1RLdra29kUy4PWAJfk',
-            baseUrl: BASE_URL
-          })
-        }
-      })(document,"script");
-    </script>
-    
+    <script src="https://aibotv3-nr-9687-658ad621387fb711000001e1.ubos.tech/ai-bot-chat@main/dist/build/static/js/bundle.min.js"></script>
       </head>
   <body>
-
+        <langflow-chat
+      id="langflow-chat-element"
+      chat_input_field="input"
+      host_url="https://aibotv3-nr-9687-658ad621387fb711000001e1.ubos.tech"
+      flow_id="customChat/66d9f6991b5a73170000001d"
+      chat_position="top-left"
+      style="position: fixed; bottom: 18px; right: 18px; z-index:99999"
+    ></langflow-chat>
     <include src="./partials/hero-header.html"></include> 
     <include src="./partials/mob-menu.html"></include>
     <include src="./partials/products.html"></include>
